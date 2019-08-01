@@ -1,13 +1,14 @@
 import React from 'react';
 
 const validation = (props) => {
+    let validationMessage = 'Longer text pleeeaaaase';
+
+    if (props.inputLength > 5) {
+        validationMessage = 'Thumbs up!';
+    }
     return (
         <div>
-            {
-                props.inputLength > 5 ?
-                <p>You're doing great (thumbs up)</p> :
-                <p>Longer text pleeeaaaase</p>
-            }
+            <p>{validationMessage}</p>
         </div>
     )
 };
